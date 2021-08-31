@@ -6,11 +6,26 @@ export const ss = StyleSheet.create({
         width: '100%',
         height: 56,
         backgroundColor: theme.colors.primary,
-        borderRadius: 8
+        borderRadius: 8,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    title: {
+        flex: 1,
+        fontSize: 15,
+        color: theme.colors.heading,
+        textAlign: 'center'
     },
     iconWrapper: {
-        flexDirection: 'row',
+        height: 56,
+        width: 56,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderRightWidth: 1,
+        borderRightColor: theme.colors.line
+    },
+    icon: {
+        height: 24,
+        width: 24
     }
 })
