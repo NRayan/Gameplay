@@ -9,7 +9,6 @@ export function SignIn() {
 
     return (
         <View style={ss.container}>
-
             <Image source={IllustrationIMG} style={ss.styleImage} resizeMode={'stretch'} />
             <View style={ss.content}>
                 <Text style={ss.title}>Conecte-se{'\n'}e organize suas{'\n'}jogatinas</Text>
