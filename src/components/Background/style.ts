@@ -3,6 +3,6 @@ import { theme } from "../../global/theme"
 
 export const ss = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
     },
 })

@@ -3,6 +3,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 import { theme } from '../../global/theme'
 import { ss } from './style'
+import { View } from 'react-native'
 
 type Props = {
     children: ReactNode
