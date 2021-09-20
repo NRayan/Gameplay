@@ -7,8 +7,11 @@ export const ss = StyleSheet.create({
     },
     header:
     {
-        // alignItems: 'center',
+        width: '100%',
+        paddingHorizontal: 24,
+        flexDirection: 'row',
         justifyContent: 'space-between',
+        alignItems: 'center',
         marginTop: getStatusBarHeight() + 26,
         marginBottom: 42,
     },
