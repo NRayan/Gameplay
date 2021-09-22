@@ -12,7 +12,7 @@ import { Member } from '../../components/Member'
 import { ListDivider } from '../../components/ListDivider'
 import ButtonIcon from '../../components/ButtonIcon'
 
-export function AppointmentDetail() {
+export function AppointmentCreate() {
     const members = [
         {
             id: '1',

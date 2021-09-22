@@ -1,7 +1,8 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { useState } from 'react'
 import { View, Text } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
-import { Appointments } from '../../components/Appointments'
+import { Appointments, AppointmentsProps } from '../../components/Appointments'
 import { Background } from '../../components/Background'
 import ButtonAdd from '../../components/ButtonAdd'
 import CategorySelect from '../../components/CategorySelect'
@@ -11,6 +12,8 @@ import Profile from '../../components/Profile'
 import { ss } from './style'
 
 export function Home() {
+
+    const navigation = useNavigation();
 
     const [category, setCategory] = useState('');
 
@@ -45,6 +48,10 @@ export function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId);
     }
 
+    function HandleAppointmentDetails(appointment: AppointmentsProps) {
+        navigation.navigate('AppointmentDetail')
+    }
+
     return (
         <Background>
             <View style={ss.header}>
@@ -59,7 +66,7 @@ export function Home() {
                     data={appointments} keyExtractor={item => item.id}
                     renderItem={({ item }) =>
                     (
-                        <Appointments data={item} />
+                        <Appointments data={item} onPress={HandleAppointmentDetails} />
                     )}
                     ItemSeparatorComponent={() => <ListDivider />} />
             </View>
