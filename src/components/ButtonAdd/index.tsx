@@ -8,11 +8,11 @@ import { theme } from '../../global/theme'
 
 export default function ButtonAdd({ ...rest }: RectButtonProps) {
     return (
-        <RectButton style={ss.container}>
+        <RectButton style={ss.container} {...rest}>
             <MaterialCommunityIcons
                 name="plus"
                 color={theme.colors.heading}
                 size={24} />
-        </RectButton>
+        </RectButton >
     )
 }

@@ -48,15 +48,19 @@ export function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId);
     }
 
-    function HandleAppointmentDetails(appointment: AppointmentsProps) {
+    function HandleAppointmentDetails() {
         navigation.navigate('AppointmentDetail')
+    }
+
+    function HandleAppointmentCreate() {
+        navigation.navigate('AppointmentCreate')
     }
 
     return (
         <Background>
             <View style={ss.header}>
                 <Profile />
-                <ButtonAdd />
+                <ButtonAdd onPress={HandleAppointmentCreate} />
             </View>
 
             <CategorySelect categorySelected={category} setCategory={HandleCategorySelect} />

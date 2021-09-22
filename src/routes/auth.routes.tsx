@@ -1,6 +1,5 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-
 import { theme } from "../global/theme";
 
 import { Home } from "../screens/Home";
