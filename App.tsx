@@ -5,9 +5,10 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from "@expo-google-fonts/rajdhan
 import AppLoading from "expo-app-loading";
 import { StatusBar } from 'expo-status-bar';
 import { Routes } from './src/routes';
-import { View } from 'react-native';
-import { SignIn } from './src/screens/SignIn';
-import { Background } from './src/components/Background';
+import { LogBox, View } from 'react-native';
+import { AuthContext, AuthProvider } from './src/hooks/auth';
+
+LogBox.ignoreLogs(['You are not currently signed in to Expo on your development machine.']);
 
 export default function App() {
 
@@ -25,7 +26,9 @@ export default function App() {
   return (
     <View style={{ flex: 1 }}>
       <StatusBar style={"light"} translucent />
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </View>
   )
 }

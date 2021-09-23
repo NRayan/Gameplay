@@ -64,16 +64,17 @@ export function Home() {
             </View>
 
             <CategorySelect categorySelected={category} setCategory={HandleCategorySelect} />
-            <View style={ss.content}>
-                <ListHeader title="Partidas agendadas" subtitle="total: 6" />
-                <FlatList style={ss.matches} showsVerticalScrollIndicator={false}
-                    data={appointments} keyExtractor={item => item.id}
-                    renderItem={({ item }) =>
-                    (
-                        <Appointments data={item} onPress={HandleAppointmentDetails} />
-                    )}
-                    ItemSeparatorComponent={() => <ListDivider />} />
-            </View>
+
+            <ListHeader title="Partidas agendadas" subtitle="total: 6" />
+
+            <FlatList style={ss.matches} showsVerticalScrollIndicator={false}
+                data={appointments} keyExtractor={item => item.id}
+                renderItem={({ item }) =>
+                (
+                    <Appointments data={item} onPress={HandleAppointmentDetails} />
+                )}
+                ItemSeparatorComponent={() => <ListDivider />}
+                contentContainerStyle={{ paddingBottom: 69 }} />
 
         </Background>
     )

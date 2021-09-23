@@ -43,7 +43,7 @@ export function AppointmentDetail() {
                         Lendários
                     </Text>
                     <Text style={ss.subtitle}>
-                        É hoje que ganhamos o challenger pra não sei o que
+                        É hoje que ganhamos o challenger pra não sei o quec com todo mundo e tals
                     </Text>
                 </View>
             </ImageBackground>
