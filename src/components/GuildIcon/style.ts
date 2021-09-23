@@ -1,13 +1,20 @@
 import { StyleSheet } from 'react-native'
+import { theme } from '../../global/theme'
 
 export const ss = StyleSheet.create({
     container: {
-        // flex: 1,
+        height: 62,
+        width: 66,
+        marginRight: 20,
+        backgroundColor: theme.colors.discord,
+        borderRadius: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden'
     },
     image: {
-        height: 64,
-        width: 64,
-        borderRadius: 8,
-        marginRight: 20
+        height: 62,
+        width: 66,
+
     }
 })
